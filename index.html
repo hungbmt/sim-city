@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Farm Game</title>
+    <link rel="stylesheet" href="./pucblic/main.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three/examples/jsm/"
+          }
+        }
+      </script>
+</head>
+<body>
+    <div id="root-window">
+        <div id="render-target"></div>
+    </div>
+    
+    <script type="module">
+       import {createGame} from "./src/game.js"
+        // window.onload = () => createGame()
+        window.onload = () => {
+          window.game = createGame()
+        }
+
+    </script>
+</body>
+</html>
